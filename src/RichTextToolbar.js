@@ -168,6 +168,10 @@ export default class RichTextToolbar extends Component {
       case actions.setHR:
       case actions.setIndent:
       case actions.setOutdent:
+      case actions.setBlockquote:
+      case actions.undo:
+      case actions.redo:
+      case actions.updateLink:
         this.state.editor._sendAction(action);
         break;
       case actions.insertLink:

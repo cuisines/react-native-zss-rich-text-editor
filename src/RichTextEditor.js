@@ -541,6 +541,21 @@ export default class RichTextEditor extends Component {
     this._sendAction(actions.setPlatform, Platform.OS);
   }
 
+  setBlockquote() {
+    this._sendAction(actions.setBlockquote);
+  }
+
+  undo() {
+    this._sendAction(actions.undo);
+  }
+
+  redo() {
+    this._sendAction(actions.redo);
+  }
+  updateLink() {
+    this._sendAction(actions.updateLink);
+  }
+
   async getTitleHtml() {
     return new Promise((resolve, reject) => {
       this.titleResolve = resolve;
