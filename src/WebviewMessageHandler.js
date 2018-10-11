@@ -179,8 +179,8 @@ export const InjectedMessageHandler = `
         case '${actions.redo}':
           zss_editor.redo(action.data);
           break;
-        case '${actions.updateLink}':
-          zss_editor.updateLink(action.data);
+        case '${actions.unlink}':
+          zss_editor.unlink();
           break;
       }
     };

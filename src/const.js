@@ -56,7 +56,7 @@ export const actions = {
   setBlockquote: 'setBlockquote',
   undo: 'undo',
   redo: 'redo',
-  updateLink: 'updateLink',
+  unlink: 'unlink',
 };
 
 

@@ -171,6 +171,7 @@ export default class RichTextToolbar extends Component {
       case actions.setBlockquote:
       case actions.undo:
       case actions.redo:
+      case actions.unlink:
       case actions.updateLink:
         this.state.editor._sendAction(action);
         break;

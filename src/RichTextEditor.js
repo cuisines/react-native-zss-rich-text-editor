@@ -552,8 +552,8 @@ export default class RichTextEditor extends Component {
   redo() {
     this._sendAction(actions.redo);
   }
-  updateLink() {
-    this._sendAction(actions.updateLink);
+  unlink() {
+    this._sendAction(actions.unlink);
   }
 
   async getTitleHtml() {
