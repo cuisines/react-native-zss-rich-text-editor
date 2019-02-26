@@ -1148,8 +1148,15 @@
 			}
 
 			zss_editor.setBlockquote = function() {
-				document.execCommand('formatBlock', false, '<blockquote>');
-				zss_editor.enabledEditingItems();
+				var current_selection = $(zss_editor.getSelectedNode());
+				var t = current_selection.prop("tagName").toLowerCase();
+				if(t == 'blockquote') {
+					var c = current_selection.html();
+					current_selection.replaceWith(c);
+				} else {
+					document.execCommand('formatBlock', false, '<blockquote>');
+					zss_editor.enabledEditingItems();
+				}
 			}
 
 			zss_editor.removeFormating = function() {
