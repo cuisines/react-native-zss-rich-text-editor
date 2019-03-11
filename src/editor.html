@@ -1291,7 +1291,7 @@
 				zss_editor.restorerange();
 				var sel = document.getSelection();
 				sel.deleteFromDocument();
-				document.execCommand('insertHTML',false,'<a href="'+encodeHtmlEntities(url)+'">'+encodeHtmlEntities(title)+'</a>');
+				document.execCommand('insertHTML',false,'<br>'+'<a href="'+encodeHtmlEntities(url)+'">'+encodeHtmlEntities(title)+'</a>');
 
 				zss_editor.enabledEditingItems();
 			}
