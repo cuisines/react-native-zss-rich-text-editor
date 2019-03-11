@@ -86,11 +86,11 @@ export default class RichTextEditor extends Component {
   }
 
   setEditorAvailableHeightBasedOnKeyboardHeight(keyboardHeight) {
-    const {top = 0, bottom = 0} = this.props.contentInset;
+    const {top = 0, bottom = 140} = this.props.contentInset;
     const {marginTop = 0, marginBottom = 0} = this.props.style;
     const spacing = marginTop + marginBottom + top + bottom;
 
-    const editorAvailableHeight = Dimensions.get('window').height - keyboardHeight - spacing;
+    const editorAvailableHeight = Dimensions.get('window').height - (keyboardHeight*2) - spacing;
     this.setEditorHeight(editorAvailableHeight);
   }
 
